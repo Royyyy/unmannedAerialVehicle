@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:neusoft="http://schemas.android.com/apk/com.unmannedaerialvehicle.neusoft.unmannedaerialvehicle"
+    tools:context="com.unmannedaerialvehicle.neusoft.unmannedaerialvehicle.appInfoActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <view.CircleView
+                android:paddingTop="50sp"
+                android:layout_width="150sp"
+                android:layout_height="150sp"
+                android:id="@+id/cv" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <view.ToggleView
+                android:id="@+id/toggleView"
+                android:layout_gravity="bottom"
+                android:layout_width="100sp"
+                android:layout_height="50sp"
+                neusoft:switch_background="@drawable/bkg_switch"
+                neusoft:slide_button="@drawable/btn_slip"
+                neusoft:switch_state="false"
+                android:paddingTop="200dp"
+                />
+            <!--<TextView-->
+                <!--android:id="@+id/tv"-->
+                <!--android:text="开关的状态"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content" />-->
+        </LinearLayout>
+
+
+    </LinearLayout>
+</RelativeLayout>
