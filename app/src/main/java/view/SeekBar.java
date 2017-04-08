@@ -37,7 +37,7 @@ public class SeekBar extends android.widget.SeekBar {
         c.rotate(-90);
         //将旋转后的视图移动回来
         c.translate(-getHeight(),0);
-        Log.i("getHeight()",getHeight()+"");
+        
         super.onDraw(c);
     }
 
