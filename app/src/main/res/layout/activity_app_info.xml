@@ -7,6 +7,13 @@
     xmlns:neusoft="http://schemas.android.com/apk/com.unmannedaerialvehicle.neusoft.unmannedaerialvehicle"
     tools:context="com.unmannedaerialvehicle.neusoft.unmannedaerialvehicle.appInfoActivity">
 
+
+    <view.CircleView
+        android:paddingTop="50sp"
+        android:layout_width="150sp"
+        android:layout_height="150sp"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/cv" />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -14,17 +21,12 @@
         android:orientation="horizontal">
 
         <LinearLayout
-            android:layout_weight="1"
+            android:layout_weight="2"
             android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:layout_height="match_parent">
 
-            <view.CircleView
-                android:paddingTop="50sp"
-                android:layout_width="150sp"
-                android:layout_height="150sp"
-                android:id="@+id/cv" />
         </LinearLayout>
+
         <LinearLayout
             android:layout_weight="1"
             android:layout_width="0dp"
@@ -47,6 +49,20 @@
                 <!--android:layout_height="wrap_content" />-->
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <view.SeekBar
+                android:id="@+id/seekBar"
+                android:layout_width="200dp"
+                android:layout_height="250dp"
+                android:thumb="@drawable/seekbar_thumb"/>
+
+        </LinearLayout>
 
     </LinearLayout>
 </RelativeLayout>
+
