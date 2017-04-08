@@ -18,6 +18,8 @@ public class CircleView extends View{
     private int circleColor = Color.argb(150, 255, 0, 0);
     private int innerCircleColor = Color.rgb(0, 150, 0);
     private int backgroundColor = Color.rgb(255,255,255);
+    private int backgroundColor2 = Color.alpha(100);
+
     private Paint paint = new Paint();
     int center = 0;
     int innerRadius = 0;
@@ -160,7 +162,7 @@ public class CircleView extends View{
         path.lineTo((float) (center + pow05), center);
         path.lineTo((float) (center + sqrt2), (float) (center + sqrt2));
         canvas.drawPath(path, paint);
-        paint.setColor(backgroundColor);
+        paint.setColor(backgroundColor2);
         canvas.drawLine(center, center, center + innerCircleRadius, center, paint);
 
         drawOnclikColor(canvas, Dir.RIGHT);
@@ -181,7 +183,7 @@ public class CircleView extends View{
         path.lineTo((float) (center - sqrt2), (float) (center + sqrt2));
         canvas.drawPath(path, paint);
 
-        paint.setColor(backgroundColor);
+        paint.setColor(backgroundColor2);
         canvas.drawLine(center, center, center - innerCircleRadius, center, paint);
 
         drawOnclikColor(canvas, Dir.LEFT);
@@ -203,7 +205,7 @@ public class CircleView extends View{
         path.lineTo((float) (center + sqrt2), (float) (center + sqrt2));
         canvas.drawPath(path, paint);
 
-        paint.setColor(backgroundColor);
+        paint.setColor(backgroundColor2);
         canvas.drawLine(center, center, center, center + innerCircleRadius, paint);
 
         drawOnclikColor(canvas, Dir.DOWN);
@@ -260,7 +262,7 @@ public class CircleView extends View{
         path.lineTo((float) (center + sqrt2), (float) (center - sqrt2));
         canvas.drawPath(path, paint);
 
-        paint.setColor(backgroundColor);
+        paint.setColor(backgroundColor2);
         canvas.drawLine(center, center, center, center - innerCircleRadius, paint);
 
         drawOnclikColor(canvas, Dir.UP);
@@ -302,7 +304,7 @@ public class CircleView extends View{
         paint.setStyle(Paint.Style.STROKE);
         canvas.drawCircle(center, center, innerRadius, paint); // 绘制圆圈
 
-        paint.setColor(backgroundColor);
+        paint.setColor(backgroundColor2);
         paint.setStyle(Paint.Style.FILL);
         paint.setStrokeWidth(4);
         canvas.drawLine(center, center, 0, 0, paint);
@@ -318,7 +320,7 @@ public class CircleView extends View{
      * @param canvas
      */
     private void clearCanvas(Canvas canvas) {
-        canvas.drawColor(backgroundColor);
+        canvas.drawColor(backgroundColor2);
     }
 
     OnTouchListener onTouchListener = new OnTouchListener() {

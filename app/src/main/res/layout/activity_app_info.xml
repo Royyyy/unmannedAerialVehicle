@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
+    android:background="@drawable/bkgcr"
     xmlns:neusoft="http://schemas.android.com/apk/com.unmannedaerialvehicle.neusoft.unmannedaerialvehicle"
     tools:context="com.unmannedaerialvehicle.neusoft.unmannedaerialvehicle.appInfoActivity">
 
@@ -12,6 +12,7 @@
         android:paddingTop="50sp"
         android:layout_width="150sp"
         android:layout_height="150sp"
+        android:background="@drawable/bkgfxp"
         android:layout_alignParentBottom="true"
         android:id="@+id/cv" />
     <LinearLayout
