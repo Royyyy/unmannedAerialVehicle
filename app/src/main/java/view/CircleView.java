@@ -23,7 +23,7 @@ public class CircleView extends View{
     int innerRadius = 0;
     private float innerCircleRadius = 0;
     private float smallCircle = 10;
-    public Dir dir = Dir.UP;
+    public Dir dir = Dir.CENTER;
 
     public CircleView(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -326,10 +326,17 @@ public class CircleView extends View{
         @Override
         public boolean onTouch(View view, MotionEvent event) {
             Dir tmp = Dir.UNDEFINE;
-            if ((tmp = checkDir(event.getX(), event.getY())) != Dir.UNDEFINE) {
-                dir = tmp;
+            if (event.getAction() != MotionEvent.ACTION_UP) {
+                if ((tmp = checkDir(event.getX(), event.getY())) != Dir.UNDEFINE) {
+                    dir = tmp;
+                    invalidate();
+                }
+            }else if (event.getAction() == MotionEvent.ACTION_UP){
+                dir = Dir.CENTER;
                 invalidate();
+
             }
+
             return true;
         }
 
